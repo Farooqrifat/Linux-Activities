@@ -1,0 +1,17 @@
+#!/bin/bash
+#Number comparison and difference
+#Farooq Rifat
+
+read -p "Enter 1st number:- " a
+read -p "Enter 2nd number:- " b
+
+while (( $a < $b ));
+do
+           echo -e "False.\n"
+	   echo "Try again (hint: enter a large number followed by a smaller number):-"
+	   
+	   read -p "Enter 1st number:- " a
+	   read -p "Enter 2nd number:- " b
+   done
+
+echo "The difference is:- $[a-b]"

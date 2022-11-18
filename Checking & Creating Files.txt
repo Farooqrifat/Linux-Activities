@@ -1,0 +1,16 @@
+#!/bin/bash
+#Checking & Creating file with random numbers with user input
+#Farooq Rifat
+
+file="$@"
+
+read -p "Enter file name: " file
+
+if [ -f $file ]
+then 
+	echo "${file} is already a file." 
+else
+	read -p "Enter the number of lines you want: " lines
+	echo "File does not exist, it has been created for you."
+	shuf -n ${lines} -e {1..10000} >> $file
+fi

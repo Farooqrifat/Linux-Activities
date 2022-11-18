@@ -1,0 +1,38 @@
+#!/usr/bin/bash
+#Program for users to check lottery numbers
+#Farooq Rifat
+
+FOUND=0
+COUNTER=0
+
+echo "Enter input"
+read -a LottoPicks 
+
+
+echo "Your ballot is ${LottoPicks[@]} "
+
+
+for i in `cat a2Winners.txt`
+do
+	((COUNTER++))
+
+	if (( ${LottoPicks} == $i )) && (($COUNTER != 6 )) 
+	then
+		echo "CONGRATS YOU MATCH A REGULAR BALL"
+		((FOUND++))
+
+	elif (( ${LottoPicks} == $i )) && (($COUNTER == 6 ))
+	then
+		((FOUND++))
+		echo "CONGRATS YOU MATCH THE BONUS BALL"
+	fi
+done
+
+	if (( $FOUND == 0 ))
+	then
+		echo "No MATCHES"
+	fi
+
+
+echo "The winning numbers are :- "
+echo "`cat a2Winners.txt`"

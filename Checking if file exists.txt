@@ -1,0 +1,14 @@
+#!/bin/bash
+#Checking if file exists
+#Farooq Rifat
+
+file="$@"
+
+read -p "Enter file name: " file
+if [ -f $file ]
+then 
+	echo "${file} is already a file." 
+else
+	touch $file
+	echo "File does not exist, it has been created for you."
+fi

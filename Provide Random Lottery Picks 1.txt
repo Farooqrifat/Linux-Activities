@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+#Provide random lottery picks (5 numbers from 1-50, 1 number from 1-10)
+#Farooq Rifat
+
+shuf -i 1-50 -n 5 > LottoPicks.txt
+shuf -i 1-10 -n 1 >> LottoPicks.txt
+

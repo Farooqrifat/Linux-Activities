@@ -1,0 +1,109 @@
+#!/bin/bash
+#Farooq Rifat
+#10 Question Quiz
+
+score=0
+questions=0
+
+read -p "London is in the UK. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "TRUE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "Manchester is the capital of England. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "FALSE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "Python is a programmming language. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "TRUE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "RAM is a software device. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "FALSE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "Linux is a open source operating system. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "TRUE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "Windows is older than Linux. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "TRUE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "Linux does not support GUI. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "FALSE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "Bash and Shell are command languages in Linux. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "TRUE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "If statements are not available in Linux. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "FALSE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+read -p "For loops are avaliable in Linux. (type true or false):- " userinput
+let questions=$questions+1
+if [ ${userinput^^} = "TRUE" ];
+then
+    echo -e "Correct\n"
+    let score=$score+1
+else 
+    echo -e "Incorrect\n"
+fi
+
+echo "You answered $score out of $questions questions correct!"
+

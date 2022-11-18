@@ -1,0 +1,11 @@
+#!/bin/bash
+#Reverse user input
+#Farooq Rifat 
+
+echo "ENTER THE TEXT YOU WANT REVERSED" 
+read userinput 
+
+revtext=`echo $userinput | rev`
+
+echo "Your initial entry is:- ${userinput}"
+echo "Your reversed entry is:- ${revtext}"

@@ -1,0 +1,64 @@
+#!/usr/bin/bash
+#Farooq Rifat
+#Script to userinput 5-10 integers & calculations
+
+i=0
+arr=()
+while (( i != 5 ))
+do
+echo "Enter your number:"
+read userinput
+arr+=($userinput)
+((i++))
+done
+
+echo "YOUR SELECTED NUMBERS ARE: ${arr[@]}"
+echo "Type "yes" if you want to pick another number | any other key to calculate"
+
+read userinput
+cont=${userinput}
+
+while [ $cont == "yes" ] && [ $i -lt "11" ]
+do
+        echo "Enter your number:"
+	read userinput
+	arr+=($userinput)
+	((i++))
+	
+	if (( "$i" < 11 ))
+	then
+	echo "Type 'yes' if you want to pick another number | ANY other key to calculate"
+	read userinput
+	cont=${userinput}
+fi
+done
+
+mult=1
+for j in ${arr[@]}
+do
+	product=$((mult*=j))
+done
+
+sum=0
+min=${arr[0]}
+max=${arr[0]}
+
+for ii in ${arr[@]}
+do
+        sum=$((sum+ii))
+if (( min > ii ))
+then
+
+        min=$ii
+fi
+if (( max < ii ))
+then
+        max=$ii
+fi
+done
+
+echo "the PRODUCT number is: $product"
+avg=$((sum/i))
+echo "The AVERAGE number is: $avg"
+echo "The SUM of numbers is: $sum"
+echo "The MAX number is: $max"

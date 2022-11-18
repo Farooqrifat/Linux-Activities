@@ -1,0 +1,17 @@
+#!/usr/bin/bash
+#Telling the user about session information
+#Farooq Rifat
+
+user=$USER
+date=`date +%D`
+time=`date +%:z`
+location=$(pwd)
+
+
+echo "Your username is $user"
+echo "The current date is $date"
+echo "The current time is $time"
+echo "You are currently in ($location) directory"
+echo "There are `ls $location | wc -l` file(s) in this folder"
+echo "The largest file in your current directory is `ls $location -Sh | head -1`"
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+#Renaming files in a test folder
+#Farooq Rifat
+
+location=$(pwd)
+date=$(date +%F)
+
+cd $location
+for file in *.txt
+ do
+    mv $file ${file%.txt}.$date
+ done
+
